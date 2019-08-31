@@ -1,0 +1,15 @@
+{
+  "name": "dayjs-example",
+  "version": "1.0.0",
+  "description": "Example for day.js usage",
+  "main": "index.js",
+  "author": "Ekanant Phanuwatyingyong",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dayjs": "^1.8.16"
+  },
+  "scripts": {
+    "dev": "node index.js"
+  }
+}
