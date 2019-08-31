@@ -8,8 +8,5 @@
   "private": false,
   "dependencies": {
     "dayjs": "^1.8.16"
-  },
-  "scripts": {
-    "dev": "node index.js"
   }
 }
