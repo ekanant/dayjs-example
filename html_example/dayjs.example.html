@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Hello, Day.js!</title>
+</head>
+<body>
+  <h1>Hello, Day.js!</h1>
+
+  <div>
+      <b>Example 1</b><br/>
+      Format date DD-MM-YYYY HH:mm:ss => <span id="example1"></span>
+  </div>
+  <br/>
+  <div>
+      <b>Example 2</b><br/>
+      Format date DD-MMMM-YYYY HH:mm:ss => <span id="example2"></span>
+  </div>
+  <br/>
+  <div>
+      <b>Example 3</b><br/>
+      Format date DD-MM-YYYY => <span id="example3"></span>
+  </div>
+  <br/>
+  <div>
+      <b>Example 4</b><br/>
+      Format date DD-MMMM-YYYY => <span id="example4"></span>
+  </div>
+  <br/>
+  <div>
+      <b>Example 5</b><br/>
+      Last date in August 2019 => <span id="example5"></span>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.16/dayjs.min.js"></script>
+  <script>
+    setInterval(function(){
+      //Example 1, Realtime clock
+      document.getElementById("example1").innerHTML = dayjs().format('DD-MM-YYYY HH:mm:ss');
+
+      //Example 2, Realtime clock
+      document.getElementById("example2").innerHTML = dayjs().format('DD-MMMM-YYYY HH:mm:ss');
+    }, 1000)
+
+    //Example 3, Format date
+    var example3Result = dayjs('2019-08-01').format('DD-MM-YYYY');
+    console.log("Format date DD-MM-YYYY", example3Result);
+    document.getElementById("example3").innerHTML = example3Result;
+
+    //Example 4, Format date
+    var example4Result = dayjs('2019-08-01').format('DD-MMMM-YYYY');
+    console.log("Format date DD-MMMM-YYYY", example4Result)
+    document.getElementById('example4').innerHTML = example4Result;
+
+    //Example 5, Find last date in month
+    var example5Result = dayjs('2019-08-01').endOf('month').toDate();
+    console.log("Last date in August 2019", example5Result)
+    document.getElementById('example5').innerHTML = example5Result;
+  </script>
+
+</body>
+</html>
